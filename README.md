@@ -11,6 +11,17 @@ For each sproc, generate relevant html inputs based on sproc parameter types.
 ### MS Northwind Database
 [Norhtind Database](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)
 
+## Structure
+
+* Database
+    * SPR.MsNorthwind
+* DataAccess
+    * SPR.DataAccess
+* Business
+    * SPR.Models
+    * SPR.Services
+* StoredProcedureReports
+
 ## Sproc Parameter types
 
 * bit
