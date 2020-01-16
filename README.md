@@ -1,3 +1,5 @@
+*see v1 branch for code*
+
 # Idea
 
 Using `sys.procedures` and `sys.parameter` list all stored procedures under a given schema (default=`dbo`). 
