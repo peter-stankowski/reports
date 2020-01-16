@@ -1,0 +1,42 @@
+﻿@model System.Data.DataTable
+
+@{
+    if (Model.Rows.Count == 0)
+    {
+        <small>no data</small>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-sm d-print-table">
+                <thead>
+                    <tr>
+                        @{
+                            foreach (var col in Model.Columns)
+                            {
+                                <th>@Html.SplitPascalCase(col.ToString())</th>
+                            }
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        foreach (System.Data.DataRow row in Model.Rows)
+                        {
+                            <tr>
+                                @{
+                                    foreach (System.Data.DataColumn col in Model.Columns)
+                                    {
+                                        <td>@Html.Raw(row[col.ColumnName])</td>
+                                    }
+                                }
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    }
+}
+

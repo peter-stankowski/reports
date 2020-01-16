@@ -1,0 +1,22 @@
+﻿@model SPR.Models.ActionResultDetails
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+@section sidebar{
+    @Html.Partial("~/Views/_Partial/_SqlSprocList.cshtml", Model.sprocList)
+}
+
+@Html.Partial("~/Views/_Partial/_SqlParametersView.cshtml", Model.sprocParameters)
+
+@{
+    if (Model.executeData != null)
+    {
+        @Html.Partial("~/Views/_Partial/_SqlSprocExecuteResult.cshtml", Model.executeData)
+    }
+}
+
+
+

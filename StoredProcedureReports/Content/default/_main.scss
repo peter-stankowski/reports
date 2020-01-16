@@ -1,0 +1,21 @@
+﻿main {
+    margin-left: $sidebarWidth;
+    margin-top: $navbarHeight;
+    // form controls
+    .form-group {
+        font-size: 12px;
+
+        .form-group input,
+        .form-group select {
+            height: auto;
+            padding: 0.2rem 0.2rem;
+        }
+    }
+
+    fieldset {
+        legend {
+            top: 0;
+            width: auto;
+        }
+    }
+}

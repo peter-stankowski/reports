@@ -1,0 +1,14 @@
+﻿@model System.Data.DataSet
+
+<div id="sqlResult">
+    @{
+        foreach (System.Data.DataTable dt in Model.Tables)
+        {
+            <fieldset class="mb-4 mt-4 p-2 border">
+                <legend> @dt.TableName.ToLower()</legend>
+                @Html.RenderDataTable(dt)
+            </fieldset>
+
+        }
+    }
+</div>

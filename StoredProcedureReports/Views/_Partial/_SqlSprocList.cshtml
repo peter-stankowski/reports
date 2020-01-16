@@ -1,0 +1,17 @@
+﻿@model List<SPR.Models.ViewModels.SqlStoredProcedureView>
+
+@{
+    var sprocName = Html.GetActiveSprocName();
+}
+
+<div class="list-group list-group-flush mt-4">
+    @{
+        foreach (var item in Model)
+        {
+            <a href="/sproc-details/@item.StoredProcedureName" class="list-group-item @(sprocName.ToString()==item.StoredProcedureName ? "active" : "")">
+                @item.StoredProcedureName
+            </a>
+
+        }
+    }
+</div>

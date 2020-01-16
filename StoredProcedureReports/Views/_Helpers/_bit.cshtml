@@ -1,0 +1,10 @@
+﻿@model SPR.Models.ViewModels.SqlParametersView
+
+<div class="form-group col-lg-3 col-md-6 col-sm-12">
+    <label>@Model.DisplayName</label>
+    <select id="@Model.InputName" name="@Model.InputName" class="form-control">
+        <option value="" @(Model.ParameterValue=="" ? "selected" : null)>(all)</option>
+        <option value="1" @(Model.ParameterValue=="1" ? "selected" : null)>Yes</option>
+        <option value="0" @(Model.ParameterValue=="0" ? "selected" : null)>No</option>
+    </select>
+</div>

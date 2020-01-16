@@ -1,0 +1,14 @@
+﻿@model SPR.Models.ViewModels.SqlParametersView
+
+<div class="form-group col-lg-3 col-md-6 col-sm-12">
+    <label>@Model.DisplayName</label>
+    <select id="@Model.InputName" name="@Model.InputName" class="form-control">
+        <option value="">(please select)</option>
+        @{ 
+            foreach(var item in Model.LookupData)
+            {
+                <option value="@item.Value" @(Model.ParameterValue==item.Value ? "selected" : null)>@item.Name</option>
+            }
+        }
+    </select>
+</div>

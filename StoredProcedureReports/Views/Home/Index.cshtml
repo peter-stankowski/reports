@@ -1,0 +1,15 @@
+﻿@model SPR.Models.ActionResultDetails
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+@section sidebar{
+    @Html.Partial("~/Views/_Partial/_SqlSprocList.cshtml", Model.sprocList)
+}
+
+
+
+
+
+

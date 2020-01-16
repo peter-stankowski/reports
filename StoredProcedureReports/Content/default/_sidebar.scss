@@ -1,0 +1,10 @@
+﻿.sidebar {
+    position: fixed;
+    width: $sidebarWidth;
+    margin-top: $navbarHeight;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: auto;
+    z-index: 10;
+}

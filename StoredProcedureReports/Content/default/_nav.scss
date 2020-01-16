@@ -1,0 +1,9 @@
+﻿nav {
+    height: $navbarHeight;
+    opacity: 0.9;
+    z-index: 100;
+
+    .sidebar-nav {
+        width: $sidebarWidth;
+    }
+}
